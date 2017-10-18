@@ -1,7 +1,0 @@
-CC=gcc
-
-all: exploitmake call_shellcodemake
-exploitmake:
-	$(CC) -o build/exploit exploit.c
-call_shellcodemake:
-	$(CC) -z execstack -o build/call_shellcode call_shellcode.c
