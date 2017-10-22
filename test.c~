@@ -1,0 +1,17 @@
+/* stack.c */
+
+/* This program has a buffer overflow vulnerability. */
+/* Our task is to exploit this vulnerability */
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+
+void go(char *data) {
+    char name[64];
+
+    strcpy(name, data);
+}
+
+int main(int argc, char **argv) {
+    go(argv[1]);
+}
